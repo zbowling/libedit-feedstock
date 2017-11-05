@@ -5,7 +5,7 @@
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: {{ version }}.{{ date }}
 
 source:
   fn: {{ name }}-{{ date }}-{{ version }}.tar.gz
@@ -47,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - scopatz
+    - dougalsutherland
