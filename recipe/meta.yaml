@@ -22,13 +22,15 @@ build:
     - {{ pin_subpackage('libedit', max_pin='x.x') }}
 
 requirements:
+  host:
+    - ncurses
+
   build:
     - {{ compiler('c') }}
     - automake
     - autoconf
     - m4
     - perl
-    - ncurses
 
 test:
   commands:
