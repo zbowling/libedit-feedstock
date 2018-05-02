@@ -20,6 +20,7 @@ build:
   run_exports:
     # no info available.  Guessing at x.x.  Change if you know better.
     - {{ pin_subpackage('libedit', max_pin='x.x') }}
+  skip: True   # [win]
 
 requirements:
   host:
@@ -31,8 +32,12 @@ requirements:
     - autoconf
     - m4
     - perl
+    - make
 
 test:
+  downstreams:
+    - sqlite
+    - krb5
   commands:
     - test -f $PREFIX/lib/libedit.dylib  # [osx]
     - test -f $PREFIX/lib/libedit.so     # [linux]
