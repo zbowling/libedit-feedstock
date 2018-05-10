@@ -23,9 +23,6 @@ build:
   skip: True   # [win]
 
 requirements:
-  host:
-    - ncurses
-
   build:
     - {{ compiler('c') }}
     - automake
@@ -33,6 +30,9 @@ requirements:
     - m4
     - perl
     - make
+
+  host:
+    - ncurses
 
 test:
   downstreams:
