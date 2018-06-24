@@ -21,14 +21,15 @@ build:
 
 requirements:
   build:
-    - toolchain
     - automake
     - autoconf
-    - m4
     - perl 5.22.0.1
-    - ncurses 5.9
+    - {{ compiler('c') }}
+  host:
+    - m4
+    - ncurses
   run:
-    - ncurses 5.9
+    - ncurses
 
 test:
   commands:
