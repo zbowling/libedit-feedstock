@@ -16,14 +16,14 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
     - automake
     - autoconf
-    - perl 5.22.0.1
+    - perl
     - {{ compiler('c') }}
   host:
     - m4
