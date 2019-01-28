@@ -1,44 +1,17 @@
-From 7dcc6adc0c08305bbf1ebe57a55ae03afba2cc8b Mon Sep 17 00:00:00 2001
+From 7f986ab20ee38fc3b5c97da8ad1dbacb941ea57b Mon Sep 17 00:00:00 2001
 From: Michael Sarahan <msarahan@gmail.com>
 Date: Wed, 2 May 2018 11:31:57 -0500
 Subject: [PATCH] Also look in libtinfo for tgetent
 
 ---
- configure    | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++----
+ configure    | 49 ++++++++++++++++++++++++++++++++++++++++++++++++-
  configure.ac |  8 +++++---
- 2 files changed, 56 insertions(+), 7 deletions(-)
+ 2 files changed, 53 insertions(+), 4 deletions(-)
 
 diff --git a/configure b/configure
-index e2733fb..7b4369b 100755
+index a274b99..8b72d4d 100755
 --- a/configure
 +++ b/configure
-@@ -586,7 +586,7 @@ MAKEFLAGS=
- 
- # Identity of this package.
- PACKAGE_NAME='libedit'
--PACKAGE_TARNAME='libedit-20170329'
-+PACKAGE_TARNAME='libedit-20170822'
- PACKAGE_VERSION='3.1'
- PACKAGE_STRING='libedit 3.1'
- PACKAGE_BUGREPORT=''
-@@ -1374,7 +1374,7 @@ Fine tuning of the installation directories:
-   --localedir=DIR         locale-dependent data [DATAROOTDIR/locale]
-   --mandir=DIR            man documentation [DATAROOTDIR/man]
-   --docdir=DIR            documentation root
--                          [DATAROOTDIR/doc/libedit-20170329]
-+                          [DATAROOTDIR/doc/libedit-20170822]
-   --htmldir=DIR           html documentation [DOCDIR]
-   --dvidir=DIR            dvi documentation [DOCDIR]
-   --pdfdir=DIR            pdf documentation [DOCDIR]
-@@ -4223,7 +4223,7 @@ fi
- 
- 
- # Define the identity of the package.
-- PACKAGE='libedit-20170329'
-+ PACKAGE='libedit-20170822'
-  VERSION='3.1'
- 
- 
 @@ -12580,7 +12580,54 @@ _ACEOF
    LIBS="-ltermcap $LIBS"
  
@@ -96,7 +69,7 @@ index e2733fb..7b4369b 100755
  fi
  
 diff --git a/configure.ac b/configure.ac
-index 9a571b2..f3810a5 100644
+index 1d02505..6462197 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -47,9 +47,11 @@ AC_PROG_AWK
@@ -115,5 +88,5 @@ index 9a571b2..f3810a5 100644
    )]
  )
 -- 
-2.11.1
+2.19.1
 
