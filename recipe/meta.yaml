@@ -1,7 +1,7 @@
 {% set name = "libedit" %}
 {% set version = "3.1" %}
-{% set date = "20170329" %}
-{% set sha256 = "91f2d90fbd2a048ff6dad7131d9a39e690fd8a8fd982a353f1333dd4017dd4be" %}
+{% set date = "20191231" %}
+{% set sha256 = "dbb82cb7e116a5f8025d35ef5b4f7d4a3cdd0a3909a146a39112095a2d229071" %}
 
 package:
   name: {{ name|lower }}
