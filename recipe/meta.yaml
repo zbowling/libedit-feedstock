@@ -43,7 +43,7 @@ test:
 
 about:
   home: http://thrysoee.dk/editline/
-  license: NetBSD
+  license: BSD-2-Clause
   license_family: BSD
   license_file: COPYING
   summary: Editline Library (libedit)
