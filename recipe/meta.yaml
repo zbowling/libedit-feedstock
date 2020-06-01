@@ -16,18 +16,23 @@ source:
 
 
 build:
-  number: 1001
-  skip: True  # [win]
+  number: 0
+  run_exports:
+    # no info available.  Guessing at x.x.  Change if you know better.
+    - {{ pin_subpackage('libedit', max_pin='x.x') }}
+  skip: True   # [win]
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - automake
     - autoconf
     - perl
-    - {{ compiler('c') }}
+    - make
   host:
     - m4
     - ncurses
+
   run:
     - ncurses
 
@@ -41,11 +46,15 @@ about:
   license: NetBSD
   license_family: BSD
   license_file: COPYING
-  summary: |
-    Command line editor library provides generic line editing, history, and tokenization
-    functions, similar to those found in GNU Readline.
+  summary: Editline Library (libedit)
+  description: |
+    This is an autotool- and libtoolized port of the NetBSD Editline library
+    (libedit). This Berkeley-style licensed command line editor library provides
+    generic line editing, history, and tokenization functions, similar to those
+    found in GNU Readline
 
 extra:
   recipe-maintainers:
-    - scopatz
     - djsutherland
+    - scopatz
+    - mingwandroid
