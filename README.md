@@ -3,14 +3,16 @@ About libedit
 
 Home: http://thrysoee.dk/editline/
 
-Package license: NetBSD
+Package license: BSD-2-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
-Summary: Command line editor library provides generic line editing, history, and tokenization
-functions, similar to those found in GNU Readline.
+Summary: Editline Library (libedit)
 
-
+This is an autotool- and libtoolized port of the NetBSD Editline library
+(libedit). This Berkeley-style licensed command line editor library provides
+generic line editing, history, and tokenization functions, similar to those
+found in GNU Readline
 
 
 Current build status
@@ -165,5 +167,6 @@ Feedstock Maintainers
 =====================
 
 * [@djsutherland](https://github.com/djsutherland/)
+* [@mingwandroid](https://github.com/mingwandroid/)
 * [@scopatz](https://github.com/scopatz/)
 
