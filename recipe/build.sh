@@ -3,6 +3,7 @@ set -ex
 autoreconf -f
 ./configure --prefix=${PREFIX} \
             --host=${HOST} \
+            --disable-static \
             CFLAGS="${CFLAGS} -I${PREFIX}/include" \
             LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 make -j ${CPU_COUNT} ${VERBOSE_AT}
