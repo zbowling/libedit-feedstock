@@ -12,8 +12,6 @@ source:
   url: http://thrysoee.dk/editline/${{ name }}-${{ date }}-${{ version }}.tar.gz
   sha256: ${{ sha256 }}
   file_name: ${{ name }}-${{ date }}-${{ version }}.tar.gz
-  patches:
-    # - 0001-Also-look-in-libtinfo-for-tgetent.patch
 
 build:
   number: 0
