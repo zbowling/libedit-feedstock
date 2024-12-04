@@ -14,7 +14,6 @@ This is an autotool- and libtoolized port of the NetBSD Editline library
 generic line editing, history, and tokenization functions, similar to those
 found in GNU Readline
 
-
 Current build status
 ====================
 
