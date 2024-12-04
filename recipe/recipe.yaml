@@ -1,5 +1,3 @@
-schema_version: 1
-
 context:
   name: libedit
   version: 3.1
