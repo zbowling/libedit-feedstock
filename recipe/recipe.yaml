@@ -23,6 +23,7 @@ requirements:
       then: libtool
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
+    - automake
     - perl
     - make
     - m4
