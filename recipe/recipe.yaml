@@ -2,7 +2,6 @@ context:
   name: libedit
   version: 3.1
   date: 20240808
-  sha256: 5f0573349d77c4a48967191cdd6634dd7aa5f6398c6a57fe037cc02696d6099f
 
 package:
   name: ${{ name|lower }}
@@ -10,8 +9,7 @@ package:
 
 source:
   url: http://thrysoee.dk/editline/${{ name }}-${{ date }}-${{ version }}.tar.gz
-  sha256: ${{ sha256 }}
-  # file_name: ${{ name }}-${{ date }}-${{ version }}.tar.gz
+  sha256: 5f0573349d77c4a48967191cdd6634dd7aa5f6398c6a57fe037cc02696d6099f
 
 build:
   number: 0
@@ -36,10 +34,8 @@ requirements:
 
 tests:
   - script:
-      - if: osx
-        then: test -f $PREFIX/lib/libedit.dylib
-      - if: linux
-        then: test -f $PREFIX/lib/libedit.so
+      - if: unix
+        then: test -f $PREFIX/lib/libedit${SHLIB_EXT}
       - if: unix
         then: test ! -f $PREFIX/lib/libedit.a
 
@@ -60,4 +56,4 @@ extra:
   recipe-maintainers:
     - djsutherland
     - scopatz
-    - mingwandroid
+    - zbowling
