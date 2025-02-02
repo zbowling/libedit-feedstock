@@ -1,7 +1,7 @@
 context:
   name: libedit
   version: 3.1
-  date: 20240808
+  date: 20250104
 
 package:
   name: ${{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: http://thrysoee.dk/editline/${{ name }}-${{ date }}-${{ version }}.tar.gz
-  sha256: 5f0573349d77c4a48967191cdd6634dd7aa5f6398c6a57fe037cc02696d6099f
+  sha256: 23792701694550a53720630cd1cd6167101b5773adddcb4104f7345b73a568ac
 
 build:
   number: 0
