@@ -196,6 +196,6 @@ Feedstock Maintainers
 =====================
 
 * [@djsutherland](https://github.com/djsutherland/)
-* [@mingwandroid](https://github.com/mingwandroid/)
 * [@scopatz](https://github.com/scopatz/)
+* [@zbowling](https://github.com/zbowling/)
 
